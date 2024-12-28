@@ -28,6 +28,19 @@ if(rex_addon::exists('tracks')) {
 }
 ```
 
+oder, wer T-Rex mag:
+
+```php
+
+use Tracks\🦖;
+
+if(rex_addon::exists('tracks')) {
+    🦖::forceBackup('meinaddon'); // Sichert standardmäßig Module und Templates
+    🦖::updateModule('meinaddon'); // Synchronisiert Module
+    🦖::updateTemplate('meinaddon'); // Synchronisiert Templates
+}
+```
+
 ### 3. In der boot.php des eigenen Addons während der Entwicklung Tracks verwenden
 
 Dazu müssen die zu synchroniserenden Module und Templates einen Prefix im Schlüssel haben, z.B. `meinprefix.%`. Da diese mit dem SQL-LIKE-Operator abgefragt werden, können beliebige Zeichen vor und nach dem `%` stehen.
