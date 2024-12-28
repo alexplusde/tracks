@@ -1,6 +1,6 @@
 # T-Racks für REDAXO 5 - Keep Modules and Templates on track with T-Racks
 
-Hilfsklasse zur Installation und Synchronisation von Templates und Modulen, die mit Add-ons mitgeliefert werden. Add-ons, die dieses System verwenden: Events, School, plus_bs5.
+Hilfsklasse zur Installation und Synchronisation von Templates und Modulen, die mit Add-ons mitgeliefert werden.
 
 Auch für eigene Addons einsetzbar!
 
@@ -65,6 +65,8 @@ if (rex::isBackend() && rex::isDebugMode() && rex_config::get('meinaddon', 'dev'
 - [Events](https://github.com/alexplusde/events/)
 - [School](https://github.com/alexplusde/school/)
 - [plus_bs5](https://github.com/alexplusde/plus_bs5/)
+- [Blaupause](https://github.com/alexplusde/blaupause/)
+- [ycom_fast_forward](https://github.com/alexplusde/ycom_fast_forward/)
 
 ## Lizenz
 
