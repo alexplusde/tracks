@@ -53,12 +53,14 @@ Dazu müssen die zu synchroniserenden Module und Templates einen Prefix im Schl�
 
 ```php
 if (rex::isBackend() && rex::isDebugMode() && rex_config::get('meinaddon', 'dev')) {
-    Helper::writeModule('meinaddon', 'meinprefix.%'); // Schreibt Module
-    Helper::writeTemplate('meinaddon', 'meinprefix.%'); // Schreibt Templates
+    Helper::writeModule('meinaddon', 'meinprefix.%'); // Schreibt Module in /meinaddon/install/module/*
+    Helper::writeTemplate('meinaddon', 'meinprefix.%'); // Schreibt Templates in /meinaddon/install/templates/*
 }
 ```
 
 > Tipp: Es empfiehlt sich, neben dem Debug-Modus auch einen eigenen Konfigurationsparameter für die Entwicklung zu verwenden, um die Synchronisation bei Bedarf zu aktivieren und zu deaktivieren.
+
+> Tipp: Als Prefix kann auch der Addon-Name verwendet werden, um die Zuordnung zu erleichtern. Das Addon `school` verwendet bspw. `school` als Prefix und damit `school.%` als Query.
 
 ## Addons, die T-Racks verwenden
 
