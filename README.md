@@ -21,11 +21,14 @@ requires:
 ```php
 use Tracks\Tracks;
 
-if(rex_addon::exists('tracks')) {
+if(\rex_addon::exists('tracks')) {
     Tracks::forceBackup('meinaddon'); // Sichert standardmäßig Module und Templates
     Tracks::updateModule('meinaddon'); // Synchronisiert Module
     Tracks::updateTemplate('meinaddon'); // Synchronisiert Templates
 }
+
+\rex_delete_cache();
+
 ```
 
 oder, wer T-Rex mag:
@@ -34,11 +37,14 @@ oder, wer T-Rex mag:
 
 use Tracks\🦖;
 
-if(rex_addon::exists('tracks')) {
+if(\rex_addon::exists('tracks')) {
     🦖::forceBackup('meinaddon'); // Sichert standardmäßig Module und Templates
     🦖::updateModule('meinaddon'); // Synchronisiert Module
     🦖::updateTemplate('meinaddon'); // Synchronisiert Templates
 }
+
+\rex_delete_cache();
+
 ```
 
 ### 3. In der boot.php des eigenen Addons während der Entwicklung Tracks verwenden
